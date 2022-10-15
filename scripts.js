@@ -40,11 +40,13 @@ function generateStr() {
     stringSrc += symbols;
   }
 
-  const randomArray = new Uint8Array(length);
+  const randomArray = new Uint32Array(length);
+  const maxNum = 2 ** 32;
   crypto.getRandomValues(randomArray);
   let result = "";
-  for (const num of randomArray) {
-    result += stringSrc.charAt(num % stringSrc.length);
+  for (let num of randomArray) {
+    const index = Math.floor(num / maxNum * stringSrc.length);
+    result += stringSrc.charAt(index);
   }
 
   randStr.value = result;
