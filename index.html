@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Random String Generator</h1>
+    <div id="container">
+      <div id="gen-rand-str">
+        <input type="text" id="rand-str" readonly />
+        <button id="gen-btn" onclick="generateStr()">generate</button>
+        <button id="copy-btn" onclick="copyStr()">copy</button>
+      </div>
+
+      <form id="customize">
+        <div id="len-sym">
+          <div id="set-len">
+            <div id="len-box">
+              <input type="text" id="length" value="6" />
+              <button type="button" onclick="decreaseLength()">-</button>
+              <button type="button" onclick="increaseLength()">+</button>
+            </div>
+            <div id="set-num">
+              <button type="button" id="six" onclick="setLength(this.id)">
+                6
+              </button>
+              <button type="button" id="eight" onclick="setLength(this.id)">
+                8
+              </button>
+              <button type="button" id="ten" onclick="setLength(this.id)">
+                10
+              </button>
+              <button type="button" id="twelve" onclick="setLength(this.id)">
+                12
+              </button>
+            </div>
+          </div>
+          <input type="text" id="symbol-list" value="-_" />
+        </div>
+        <div id="check-box">
+          <span>
+            <input type="checkbox" id="lower" checked />
+            <label>Lowercase</label>
+          </span>
+          <span>
+            <input type="checkbox" id="number" />
+            <label>Numbers</label>
+          </span>
+          <span>
+            <input type="checkbox" id="symbol" />
+            <label>Symbols</label>
+          </span>
+          <span>
+            <input type="checkbox" id="upper" />
+            <label>Uppercase</label>
+          </span>
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script src="scripts.js"></script>
+</html>
