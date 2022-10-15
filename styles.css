@@ -18,7 +18,7 @@ h1 {
   height: fit-content;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 20px 10px;
+  padding: 20px 25px 20px 25px;
 }
 
 #rand-str,
@@ -37,7 +37,6 @@ h1 {
 
 #gen-btn {
   float: right;
-  margin-right: 5px;
 }
 
 #customize {
